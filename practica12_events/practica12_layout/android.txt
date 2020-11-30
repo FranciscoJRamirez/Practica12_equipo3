@@ -1,3 +1,0 @@
-title=Kivy layout
-author=Equipo3
-orientation=portrait
