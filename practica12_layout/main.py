@@ -23,14 +23,14 @@ class Control(BoxLayout):
     def __init__(self):
         super(Control, self).__init__()
 
-    def add(self):
+    """def add(self):
         if self.name.text == "" or self.g.text == "" or self.y.text=="":
             self.lbl.text = "Tienes que rellenar los campos que se te piden"
         else: 
             self .list_peliculas.append(Peliculas(self.name.text, self.g.text, self.y.text))
     def search(self):
         for p in self.list_peliculas:
-            self.lbl.text = print(p)
+            self.lbl.text = self.lbl.text + print(p)"""
     
 class MainApp(App):
     title = "Hola mundo"
