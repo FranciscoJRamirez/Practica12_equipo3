@@ -1,0 +1,27 @@
+<Control>:
+    lbl: texto
+    name: nombre
+    g: genero
+    y: anio
+    BoxLayout:
+        orientation: 'horizontal'
+
+        TextInput:
+            id: nombre
+            multiline: False
+            hint_text: 'Titulo de la pelicula'
+        TextInput:
+            id: genero
+            multiline: False
+            hint_text: 'Genero'
+        TextInput:
+            id: anio
+            multiline: False
+            hint_text: 'Año'
+        Button:
+            text: 'Agregar'
+            on_press: root.btn()
+    Label:
+        id: texto
+            text: '<- picale a ese boton'
+    
