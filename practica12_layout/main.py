@@ -37,5 +37,5 @@ class MainApp(App):
     def build(self):
         return Control()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     MainApp().run()
