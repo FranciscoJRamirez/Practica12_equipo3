@@ -65,7 +65,9 @@ class DrawingApp(App):
     def on_touch_down(self, touch):
         print(touch)
     def on_touch_move(self, touch):
-        print(touch)
+        #print(touch)
+        if 'angle' in touch.profile:
+            print('The touch angle is', touch.a)
     def on_touch_up(self, touch):
         print("RELEASED!",touch)
 
