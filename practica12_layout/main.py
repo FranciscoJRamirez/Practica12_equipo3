@@ -62,9 +62,6 @@ class DrawingApp(App):
 
     def clear(self, wid, *largs):
         wid.canvas.clear()
-        
-    def close(self, *largs):
-        DrawingApp().stop()
 
     def build(self):
         wid = Widget()
@@ -84,15 +81,12 @@ class DrawingApp(App):
         btnClear = Button(text='Limpiar',
                            on_press=partial(self.clear, wid))
         
-        btnClose = Button(text='Salir',
-                           on_press=partial(self.close))
 
         layout = BoxLayout(size_hint=(1, None), height=50)
         layout.add_widget(btnTree)
         layout.add_widget(btnStar)
         layout.add_widget(btnHouse)
         layout.add_widget(btnClear)
-        layout.add_widget(btnClose)
 
         root = BoxLayout(orientation='vertical')
         root.add_widget(label)
