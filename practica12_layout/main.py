@@ -62,6 +62,12 @@ class DrawingApp(App):
 
     def clear(self, wid, *largs):
         wid.canvas.clear()
+    def on_touch_down(self, touch):
+        print(touch)
+    def on_touch_move(self, touch):
+        print(touch)
+    def on_touch_up(self, touch):
+        print("RELEASED!",touch)
 
     def build(self):
         wid = Widget()
