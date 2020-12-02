@@ -9,6 +9,12 @@ from kivy.uix.stencilview import StencilView
 from random import random as r
 from functools import partial
 
+"""
+
+Practica 12
+Equipo 3 
+
+"""
 
 class StencilWidget(StencilView):
 
