@@ -30,7 +30,7 @@ class Practica12(App):
                 #Rectangle(pos=(random() * wid.width + wid.x,
                  #              random() * wid.height + wid.y), size=(10, 10))
                 Line(pos=(random() * wid.width + wid.x,
-                               random() * wid.height + wid.y), circle=(380,145,2),width=2)
+                               random() * wid.height + wid.y), circle=(380,145,2),width=10)
 
     def nuevoBloque(self, wid, *largs):
         wid.pos = (0, 0)
@@ -46,7 +46,7 @@ class Practica12(App):
         label = Label(text='0')
 
         dibujar = Button(text='Dibujar rectangulos')
-        dibujar.bind(on_press=partial(self.dibujarCuadros, label, wid, 200))
+        dibujar.bind(on_press=partial(self.dibujarCuadros, label, wid, 100))
 
         limpiar = Button(text='Reset Rectangles')
         limpiar.bind(on_press=partial(self.limpiarCuadros, label, wid))
