@@ -22,22 +22,18 @@ class StencilWidget(StencilView):
 
 class Practica12(App):
 
-    def dibujarCuadros(self, label, wid, count, *largs):
+    def dibujarCirculos(self, label, wid, count, *largs):
         label.text = str(int(label.text) + count)
         with wid.canvas:
             for x in range(count):
                 Color(r(), 10, 10, mode='hsv')
-                #Rectangle(pos=(random() * wid.width + wid.x,
-                 #              random() * wid.height + wid.y), size=(10, 10))
-                #Line(pos=(r() * wid.width + wid.x,
-                #               r() * wid.height + wid.y), circle=(380,145,2),width=10)
                 Ellipse(pos=(r() * wid.width + wid.x, r() * wid.height + wid.y), size=(10,10))
 
     def nuevoBloque(self, wid, *largs):
         wid.pos = (0, 0)
         wid.size = Window.size
 
-    def limpiarCuadros(self, label, wid, *largs):
+    def limpiarCirculos(self, label, wid, *largs):
         label.text = '0'
         wid.canvas.clear()
 
@@ -46,13 +42,13 @@ class Practica12(App):
 
         label = Label(text='0')
 
-        dibujar = Button(text='Dibujar rectangulos')
-        dibujar.bind(on_press=partial(self.dibujarCuadros, label, wid, 100))
+        dibujar = Button(text='Dibujar Circulos')
+        dibujar.bind(on_press=partial(self.dibujarCirculos, label, wid, 100))
 
-        limpiar = Button(text='Reset Rectangles')
-        limpiar.bind(on_press=partial(self.limpiarCuadros, label, wid))
+        limpiar = Button(text='Limpiar circulos')
+        limpiar.bind(on_press=partial(self.limpiarCirculos, label, wid))
 
-        nuevo = Button(text='Reset Stencil')
+        nuevo = Button(text='Mostrar toda la pantalla')
         nuevo.bind(on_press=partial(self.nuevoBloque, wid))
 
         layout = BoxLayout(size_hint=(1, None), height=50)
