@@ -1,12 +1,12 @@
 from kivy.app import App
 from kivy.core.window import Window
-from kivy.graphics import Color, Rectangle, Line
+from kivy.graphics import Color, Rectangle, Line, Ellipse
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.floatlayout import FloatLayout
 from kivy.uix.button import Button
 from kivy.uix.label import Label
 from kivy.uix.stencilview import StencilView
-from random import random
+from random import random as r
 from functools import partial
 
 
@@ -26,11 +26,12 @@ class Practica12(App):
         label.text = str(int(label.text) + count)
         with wid.canvas:
             for x in range(count):
-                Color(random(), 1, 1, mode='hsv')
+                Color(r(), 10, 10, mode='hsv')
                 #Rectangle(pos=(random() * wid.width + wid.x,
                  #              random() * wid.height + wid.y), size=(10, 10))
-                Line(pos=(random() * wid.width + wid.x,
-                               random() * wid.height + wid.y), circle=(380,145,2),width=10)
+                #Line(pos=(r() * wid.width + wid.x,
+                #               r() * wid.height + wid.y), circle=(380,145,2),width=10)
+                Ellipse(pos=(r() * wid.width + wid.x, r() * wid.height + wid.y), size=(10,10))
 
     def nuevoBloque(self, wid, *largs):
         wid.pos = (0, 0)
